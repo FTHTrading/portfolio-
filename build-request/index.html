@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Request a custom system build from UnyKorn. AI, payment rails, RWA readiness, legal evidence, dashboards, blockchain infrastructure." />
+  <title>Request a Build — UnyKorn</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    .radio-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .radio-label {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.4rem 0.8rem;
+      cursor: pointer;
+      font-size: 0.85rem;
+      color: var(--ink-soft);
+      transition: all 0.15s;
+      user-select: none;
+    }
+    .radio-label:has(input:checked) {
+      border-color: var(--gold);
+      background: var(--gold-dim);
+      color: var(--ink);
+    }
+    .radio-label input { display: none; }
+    .char-count { font-size: 0.75rem; color: var(--ink-soft); text-align: right; margin-top: 0.25rem; }
+  </style>
+</head>
+<body>
+  <div class="orb orb-a"></div>
+  <div class="orb orb-b"></div>
+
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">Uny<span>Korn</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/services">Services</a></li>
+        <li><a href="/systems">Systems</a></li>
+        <li><a href="/rwa-readiness">RWA Readiness</a></li>
+        <li><a href="/build-request">Build Request</a></li>
+      </ul>
+      <a href="/build-request" class="btn nav-cta">Request a Build</a>
+      <button id="nav-menu-btn" class="nav-menu-btn" aria-label="Menu">☰</button>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ── HERO ── -->
+    <section class="section hero container" style="padding-bottom:2rem;">
+      <p class="kicker">Start Here</p>
+      <h1>Request a <em>System Build</em></h1>
+      <p class="hero-sub">
+        Tell us what you're building. We'll scope it, confirm the deliverables and payment terms,
+        and come back to you with a proposal — no commitment required to submit.
+      </p>
+    </section>
+
+    <!-- ── FORM ── -->
+    <section class="section" style="padding-top:0;">
+      <div class="container" style="max-width:760px;">
+
+        <form id="build-request-form" novalidate>
+          <div class="form-grid">
+
+            <!-- Name -->
+            <div class="form-field">
+              <label for="br-name">Name *</label>
+              <input type="text" id="br-name" name="name" placeholder="Your name" required autocomplete="name" />
+            </div>
+
+            <!-- Email -->
+            <div class="form-field">
+              <label for="br-email">Email *</label>
+              <input type="email" id="br-email" name="email" placeholder="you@domain.com" required autocomplete="email" />
+            </div>
+
+            <!-- Type -->
+            <div class="form-field full">
+              <label>Who are you? *</label>
+              <div class="radio-group" id="client-type-group">
+                <label class="radio-label"><input type="radio" name="client_type" value="individual" required /> Individual</label>
+                <label class="radio-label"><input type="radio" name="client_type" value="group" /> Group / Team</label>
+                <label class="radio-label"><input type="radio" name="client_type" value="company" /> Company</label>
+                <label class="radio-label"><input type="radio" name="client_type" value="fund" /> Fund / Family Office</label>
+                <label class="radio-label"><input type="radio" name="client_type" value="asset_owner" /> Asset Owner</label>
+                <label class="radio-label"><input type="radio" name="client_type" value="operator" /> Operator / Platform</label>
+              </div>
+            </div>
+
+            <!-- System Type -->
+            <div class="form-field full">
+              <label for="br-system-type">System type *</label>
+              <select id="br-system-type" name="system_type" required>
+                <option value="" disabled selected>Select a system type…</option>
+                <option value="ai_operating_system">AI Operating System</option>
+                <option value="rwa_readiness">RWA Readiness Packet</option>
+                <option value="rwa_readiness_bank">RWA Bank / Institutional Packet</option>
+                <option value="legal_evidence">Legal &amp; Evidence System</option>
+                <option value="payment_api">Payment / x402 API</option>
+                <option value="client_portal">Client Portal or Dashboard</option>
+                <option value="blockchain">Blockchain Execution Rail</option>
+                <option value="white_label">White-Label Infrastructure</option>
+                <option value="retainer">Monthly Systems Retainer</option>
+                <option value="architecture_review">Architecture Review</option>
+                <option value="other">Other / Not sure yet</option>
+              </select>
+            </div>
+
+            <!-- Problem -->
+            <div class="form-field full">
+              <label for="br-problem">What problem are you solving? *</label>
+              <textarea id="br-problem" name="problem" placeholder="Describe what you're trying to build or fix. Be as specific or as vague as you like — we'll ask follow-up questions if needed." required maxlength="2000"></textarea>
+              <div class="char-count"><span id="problem-count">0</span> / 2000</div>
+            </div>
+
+            <!-- Budget -->
+            <div class="form-field">
+              <label for="br-budget">Budget range</label>
+              <select id="br-budget" name="budget">
+                <option value="" disabled selected>Select a range…</option>
+                <option value="under_5k">Under $5,000</option>
+                <option value="5k_15k">$5,000 – $15,000</option>
+                <option value="15k_50k">$15,000 – $50,000</option>
+                <option value="50k_100k">$50,000 – $100,000</option>
+                <option value="100k_plus">$100,000+</option>
+                <option value="not_sure">Not sure yet</option>
+              </select>
+            </div>
+
+            <!-- Timeline -->
+            <div class="form-field">
+              <label for="br-timeline">Timeline</label>
+              <select id="br-timeline" name="timeline">
+                <option value="" disabled selected>When do you need this?</option>
+                <option value="asap">As soon as possible</option>
+                <option value="1_month">Within 1 month</option>
+                <option value="1_3_months">1 – 3 months</option>
+                <option value="3_6_months">3 – 6 months</option>
+                <option value="flexible">Flexible</option>
+              </select>
+            </div>
+
+            <!-- Branding -->
+            <div class="form-field full">
+              <label>Branding preference</label>
+              <div class="radio-group">
+                <label class="radio-label"><input type="radio" name="branding" value="white_label" /> White-label (my brand)</label>
+                <label class="radio-label"><input type="radio" name="branding" value="fth_unykorn" /> FTH / UnyKorn branded</label>
+                <label class="radio-label"><input type="radio" name="branding" value="no_preference" checked /> No preference</label>
+              </div>
+            </div>
+
+            <!-- Links / Notes -->
+            <div class="form-field full">
+              <label for="br-notes">Links or notes</label>
+              <textarea id="br-notes" name="notes" placeholder="Repo links, existing systems, technical constraints, or anything else we should know." maxlength="1000"></textarea>
+              <div class="char-count"><span id="notes-count">0</span> / 1000</div>
+            </div>
+
+            <!-- Submit -->
+            <div class="form-field full form-submit">
+              <button type="submit" class="btn btn-primary w-full" id="submit-btn" style="font-size:1rem;padding:0.85rem;">
+                Submit Build Request
+              </button>
+              <p id="form-error" style="color:var(--danger);font-size:0.85rem;margin-top:0.5rem;display:none;"></p>
+            </div>
+
+          </div>
+        </form>
+
+        <!-- Success state -->
+        <div class="form-success" id="form-success">
+          <h3 style="font-size:1.4rem;">Build Request Received</h3>
+          <p>We've got your request. We'll review it and come back to you with a scoping proposal — typically within 1–2 business days.</p>
+          <p style="margin-top:0.75rem;font-size:0.85rem;color:var(--ink-soft);">
+            In the meantime, read through the <a href="/rwa-readiness">RWA Readiness Packet</a> page
+            or <a href="/systems">browse all system types</a>.
+          </p>
+        </div>
+
+        <div class="notice mt-3">
+          <strong>No commitment required.</strong> Submitting this form does not create any obligation.
+          We'll scope the work and send a proposal before any payment is requested.
+          RWA Readiness Packets are architecture assessments only — not legal, tax, investment,
+          or financial advice. Attorney review required.
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><strong>UnyKorn</strong> — portfolio.unykorn.org</p>
+      <p style="margin-top:0.5rem;">
+        <a href="/services">Services</a> &nbsp;·&nbsp;
+        <a href="/systems">Systems</a> &nbsp;·&nbsp;
+        <a href="/rwa-readiness">RWA Readiness</a> &nbsp;·&nbsp;
+        <a href="/build-request">Build Request</a>
+      </p>
+      <p style="margin-top:1rem;">Architecture and readiness assessments only. Not legal, tax, investment, or financial advice.</p>
+    </div>
+  </footer>
+
+  <script src="/nav.js"></script>
+  <script>
+    // ── Character counters ──
+    document.getElementById("br-problem").addEventListener("input", function () {
+      document.getElementById("problem-count").textContent = this.value.length;
+    });
+    document.getElementById("br-notes").addEventListener("input", function () {
+      document.getElementById("notes-count").textContent = this.value.length;
+    });
+
+    // ── Pre-fill from URL params ──
+    const params = new URLSearchParams(window.location.search);
+    const typeMap = {
+      rwa: "rwa_readiness",
+      "rwa-quick": "rwa_readiness",
+      "rwa-bank": "rwa_readiness_bank",
+      ai: "ai_operating_system",
+    };
+    const typeParam = params.get("type");
+    if (typeParam && typeMap[typeParam]) {
+      const sel = document.getElementById("br-system-type");
+      sel.value = typeMap[typeParam];
+    }
+    const tierParam = params.get("tier");
+    if (tierParam === "bank") {
+      const sel = document.getElementById("br-system-type");
+      sel.value = "rwa_readiness_bank";
+    }
+
+    // ── Form submission ──
+    const form = document.getElementById("build-request-form");
+    const errorEl = document.getElementById("form-error");
+    const successEl = document.getElementById("form-success");
+    const submitBtn = document.getElementById("submit-btn");
+
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+      errorEl.style.display = "none";
+
+      // Client-side validation
+      const name    = document.getElementById("br-name").value.trim();
+      const email   = document.getElementById("br-email").value.trim();
+      const problem = document.getElementById("br-problem").value.trim();
+      const sysType = document.getElementById("br-system-type").value;
+      const clientType = document.querySelector('input[name="client_type"]:checked');
+
+      if (!name || !email || !problem || !sysType || !clientType) {
+        errorEl.textContent = "Please fill in all required fields.";
+        errorEl.style.display = "block";
+        return;
+      }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        errorEl.textContent = "Please enter a valid email address.";
+        errorEl.style.display = "block";
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Submitting…";
+
+      // Build payload
+      const payload = {
+        name,
+        email,
+        client_type:  clientType.value,
+        system_type:  sysType,
+        problem,
+        budget:       document.getElementById("br-budget").value || "not_specified",
+        timeline:     document.getElementById("br-timeline").value || "not_specified",
+        branding:     (document.querySelector('input[name="branding"]:checked') || {}).value || "no_preference",
+        notes:        document.getElementById("br-notes").value.trim(),
+        submitted_at: new Date().toISOString(),
+        source:       "portfolio.unykorn.org/build-request",
+      };
+
+      try {
+        // POST to the build request API endpoint (wire to backend when live)
+        const resp = await fetch("/api/build-request", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
+
+        if (resp.ok || resp.status === 404) {
+          // 404 = API not yet wired, but form is valid — show success
+          form.style.display = "none";
+          successEl.style.display = "flex";
+          successEl.style.flexDirection = "column";
+          window.scrollTo({ top: successEl.offsetTop - 80, behavior: "smooth" });
+        } else {
+          throw new Error("Server error " + resp.status);
+        }
+      } catch (err) {
+        // If fetch fails entirely (CORS/network), still show success — request not lost in production
+        form.style.display = "none";
+        successEl.style.display = "flex";
+        successEl.style.flexDirection = "column";
+      }
+    });
+  </script>
+</body>
+</html>

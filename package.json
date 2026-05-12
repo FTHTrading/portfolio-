@@ -1,0 +1,12 @@
+{
+  "name": "portfolio-unykorn",
+  "version": "1.0.0",
+  "description": "portfolio.unykorn.org — UnyKorn client-facing portfolio and services site",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build.js",
+    "dev": "node scripts/serve.js",
+    "validate": "node scripts/build.js --validate-only"
+  },
+  "devDependencies": {}
+}
