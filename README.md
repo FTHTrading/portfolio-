@@ -11,7 +11,7 @@ Client-facing portfolio and services site for **portfolio.unykorn.org**
 | `/rwa-readiness` | `rwa-readiness/index.html` |
 | `/build-request` | `build-request/index.html` |
 | `/systems` | `systems/index.html` |
-| `/systems/troptions` | `systems/troptions/index.html` |
+| `/systems/troptions` | `systems/troptions/index.html` (Turnkey Exchange Infrastructure — Sale · Lease · SaaS) |
 | `/command-center` | `command-center/index.html` |
 | `/developer` | `developer/index.html` (Quant API Portal & Docs — Access Gate: `12345`) |
 | `/data/troptions-catalog.json` | TROPTIONS machine catalog |
