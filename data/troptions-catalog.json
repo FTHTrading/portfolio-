@@ -1,0 +1,302 @@
+{
+  "schema": "unykorn-troptions-catalog/v1",
+  "generated_at": "2026-05-27",
+  "system_family": "TROPTIONS",
+  "description": "22-year trade currency network — institutional hub, Exchange OS (DEX, XRPL, x402, launch, proof), Solana mint console, live sports commerce, university, fan OS, and T-VEX-8 deal room gates.",
+  "cloudflare_account_id": "07bcc4a189ef176261b818409c95891f",
+  "relationship_flow": [
+    "troptionsmint.com — Solana institutional mint",
+    "troptions.unykorn.org — Hub + Exchange OS",
+    "troptionslive.unykorn.org — World Cup 2026 / sports commerce",
+    "launch.unykorn.org — DONK AI launcher + mint registry",
+    "fthedu.unykorn.org — TROPTIONS University",
+    "fifa.unykorn.org — WhichWay fan OS",
+    "fthtrading.github.io/T-Lev-8- — T-VEX-8 deal room (8 gates)"
+  ],
+  "sites": [
+    {
+      "id": "troptionsmint",
+      "name": "TROPTIONS Mint",
+      "url": "https://troptionsmint.com/",
+      "http_status": 200,
+      "status": "live",
+      "role": "Institutional Solana mint console (mainnet, R2, D1, Workers AI)",
+      "source_path": "C:\\Users\\Kevan\\troptionsmint",
+      "deploy": "cd C:\\Users\\Kevan\\troptionsmint && npm run build && npm run cf:deploy",
+      "worker": "troptionsmint",
+      "domains": ["troptionsmint.com", "www.troptionsmint.com", "api.troptionsmint.com", "wc.troptionsmint.com", "donk.troptionsmint.com"]
+    },
+    {
+      "id": "troptions-hub",
+      "name": "TROPTIONS Hub",
+      "url": "https://troptions.unykorn.org/troptions",
+      "http_status": 200,
+      "status": "live",
+      "role": "Institutional hub — verticals, ecosystem nav, network standing",
+      "source_path": "C:\\Users\\Kevan\\troptions",
+      "deploy": "cd C:\\Users\\Kevan\\troptions && npm run build && npm run cf:build && npm run cf:deploy",
+      "worker": "troptions",
+      "domains": ["troptions.unykorn.org", "troptionslive.unykorn.org", "troptionsexchange.unykorn.org", "api.troptions.unykorn.org"]
+    },
+    {
+      "id": "exchange-os",
+      "name": "TROPTIONS Exchange OS",
+      "url": "https://troptions.unykorn.org/exchange-os",
+      "alt_urls": ["https://troptionsexchange.unykorn.org/exchange-os", "https://troptionslive.unykorn.org/exchange-os"],
+      "http_status": 200,
+      "status": "live",
+      "role": "Live DEX map, XRPL rails, x402, launch workspace, proof room, control center",
+      "source_path": "C:\\Users\\Kevan\\troptions",
+      "deploy": "cd C:\\Users\\Kevan\\troptions && npm run cf:deploy",
+      "worker": "troptions"
+    },
+    {
+      "id": "exchange-control",
+      "name": "Exchange OS Control Center",
+      "url": "https://troptionsexchange.unykorn.org/exchange-os/control-center",
+      "http_status": 200,
+      "status": "live",
+      "role": "Operator control layer — chain health, readiness probes",
+      "source_path": "C:\\Users\\Kevan\\troptions",
+      "deploy": "cd C:\\Users\\Kevan\\troptions && npm run cf:deploy",
+      "worker": "troptions"
+    },
+    {
+      "id": "t-vex-8",
+      "name": "T-VEX-8 Deal Room",
+      "url": "https://fthtrading.github.io/T-Lev-8-/",
+      "http_status": 200,
+      "status": "live",
+      "role": "VEX token, sports network, 8 gates, infrastructure comparison, legacy domain map",
+      "source_path": "C:\\Users\\Kevan\\GitHub_Audit\\T-Lev-8-",
+      "deploy": "Push main to fthtrading/T-Lev-8- (GitHub Pages)",
+      "worker": null
+    },
+    {
+      "id": "troptions-live-sports",
+      "name": "TROPTIONS Live — Sports",
+      "url": "https://troptionslive.unykorn.org/sports",
+      "http_status": 200,
+      "status": "live",
+      "role": "World Cup 2026 Atlanta — sponsors, venues, Founder Pass, merchant QR",
+      "source_path": "C:\\Users\\Kevan\\troptions",
+      "deploy": "cd C:\\Users\\Kevan\\troptions && npm run cf:deploy",
+      "worker": "troptions"
+    },
+    {
+      "id": "launch-donk",
+      "name": "DONK AI / Token Launcher",
+      "url": "https://launch.unykorn.org",
+      "http_status": 200,
+      "status": "live",
+      "role": "Solana campaigns, fan memories, merchant namespaces, mint registry",
+      "source_path": "C:\\Users\\Kevan\\troptions",
+      "deploy": "cd C:\\Users\\Kevan\\troptions && npm run cf:deploy",
+      "worker": "troptions",
+      "notes": "DNS routes to troptions worker; redeploy troptions to refresh launch surfaces"
+    },
+    {
+      "id": "launch-mints",
+      "name": "Mint Registry",
+      "url": "https://launch.unykorn.org/mints",
+      "http_status": 200,
+      "status": "live",
+      "source_path": "C:\\Users\\Kevan\\troptions",
+      "deploy": "cd C:\\Users\\Kevan\\troptions && npm run cf:deploy",
+      "worker": "troptions"
+    },
+    {
+      "id": "launch-truth",
+      "name": "System Truth",
+      "url": "https://launch.unykorn.org/system/truth",
+      "http_status": 200,
+      "status": "live",
+      "source_path": "C:\\Users\\Kevan\\troptions",
+      "deploy": "cd C:\\Users\\Kevan\\troptions && npm run cf:deploy",
+      "worker": "troptions"
+    },
+    {
+      "id": "fthedu",
+      "name": "TROPTIONS University (FTH Academy)",
+      "url": "https://fthedu.unykorn.org",
+      "http_status": 200,
+      "status": "live",
+      "role": "11 tracks, 36 courses — education SaaS tiers",
+      "source_path": "C:\\Users\\Kevan\\troptions (also /troptions/university)",
+      "deploy": "cd C:\\Users\\Kevan\\troptions && npm run cf:deploy — OR wrangler pages deploy for project fthedu if split",
+      "pages_project": "fthedu",
+      "notes": "fthedu.pages.dev returns 404; production traffic on custom domain OK via worker/DNS"
+    },
+    {
+      "id": "fifa-whichway",
+      "name": "WhichWay / WWAI (FIFA host)",
+      "url": "https://fifa.unykorn.org",
+      "http_status": 200,
+      "status": "live",
+      "role": "Fan OS — multilingual concierge for venues and events",
+      "source_path": "C:\\Users\\Kevan\\Desktop\\Projects\\fifa-unykorn-router",
+      "deploy": "cd C:\\Users\\Kevan\\Desktop\\Projects\\fifa-unykorn-router && wrangler deploy",
+      "worker": "fifa-unykorn-router",
+      "pages_project": "fifa-unykorn, troptions-fifa"
+    },
+    {
+      "id": "whichway-live",
+      "name": "WhichWay.live",
+      "url": "https://whichway.live",
+      "http_status": 200,
+      "status": "live",
+      "role": "Primary WhichWay brand domain",
+      "source_path": "See troptions ecosystem-nav / FIFA Wilkins apps",
+      "deploy": "Project-specific — see FIFA---Wilkins",
+      "worker": null
+    },
+    {
+      "id": "goatx",
+      "name": "GoatX (Solana SPL)",
+      "url": "https://goat.unykorn.org",
+      "http_status": 200,
+      "status": "live",
+      "role": "GoatX hub — SPL, Raydium LP, DEX/LP/launch registry",
+      "source_path": "C:\\Users\\Kevan\\goat-site",
+      "deploy": "cd C:\\Users\\Kevan\\goat-site && node server.js",
+      "worker": null,
+      "local_port": 8850,
+      "tunnel": "cloudflared goat.yml → 127.0.0.1:8850"
+    },
+    {
+      "id": "troptions-pdf-host",
+      "name": "TROPTIONS PDF Host",
+      "url": "https://troptions.drunks.app",
+      "http_status": null,
+      "status": "worker",
+      "role": "Static PDF downloads for diligence packs",
+      "source_path": "C:\\Users\\Kevan\\troptions",
+      "deploy": "cd C:\\Users\\Kevan\\troptions && wrangler deploy -c wrangler.pdfs.jsonc",
+      "worker": "troptions-pdf-host"
+    },
+    {
+      "id": "troptions-org",
+      "name": "TROPTIONS.org",
+      "url": "https://troptions.org",
+      "http_status": 200,
+      "status": "live",
+      "source_path": "DNS / Pages — Phase 4 cutover per system register",
+      "deploy": "Point troptions.org to hub when ready",
+      "worker": null
+    },
+    {
+      "id": "troptions-org-dao",
+      "name": "DAO (troptions.org/dao)",
+      "url": "https://troptions.org/dao",
+      "http_status": 404,
+      "status": "broken",
+      "source_path": "C:\\Users\\Kevan\\troptions or GitHub Pages /dao",
+      "deploy": "Publish /dao route or redirect to troptions.unykorn.org",
+      "worker": null
+    },
+    {
+      "id": "legacy-troptions-io",
+      "name": "TROPTIONS.IO (legacy)",
+      "url": "https://troptions.io",
+      "http_status": 405,
+      "status": "redirect-pending",
+      "target": "https://troptions.unykorn.org/troptions",
+      "source_path": "C:\\Users\\Kevan\\GitHub_Audit\\T-Lev-8-\\REBRAND\\cloudflare-worker-legacy-redirects.js",
+      "deploy": "Deploy legacy redirect worker on troptions.io zone",
+      "worker": "T-Lev-8 legacy redirects"
+    },
+    {
+      "id": "legacy-troptionsxchange",
+      "name": "TROPTIONSXCHANGE.IO (legacy)",
+      "url": "https://troptionsxchange.io",
+      "http_status": 405,
+      "status": "redirect-pending",
+      "target": "https://troptionslive.unykorn.org/exchange-os",
+      "source_path": "C:\\Users\\Kevan\\GitHub_Audit\\T-Lev-8-\\REBRAND\\cloudflare-worker-legacy-redirects.js",
+      "deploy": "Deploy legacy redirect worker on troptionsxchange.io zone"
+    },
+    {
+      "id": "legacy-university",
+      "name": "TROPTIONS-UNIVERSITY.COM (legacy)",
+      "url": "https://troptions-university.com",
+      "http_status": 200,
+      "status": "live",
+      "target": "https://fthedu.unykorn.org",
+      "source_path": "C:\\Users\\Kevan\\GitHub_Audit\\T-Lev-8-\\REBRAND\\cloudflare-worker-legacy-redirects.js",
+      "deploy": "Redirect worker — www returns 200"
+    },
+    {
+      "id": "legacy-ttn",
+      "name": "TROPTIONS Television Network",
+      "url": "https://troptionstelevisionnetwork.tv",
+      "http_status": 200,
+      "status": "live",
+      "target": "https://troptionslive.unykorn.org/sports",
+      "source_path": "C:\\Users\\Kevan\\GitHub_Audit\\T-Lev-8-\\REBRAND\\cloudflare-worker-legacy-redirects.js"
+    },
+    {
+      "id": "portfolio",
+      "name": "UNYKORN Portfolio",
+      "url": "https://portfolio.unykorn.org",
+      "http_status": 200,
+      "status": "live",
+      "source_path": "C:\\Users\\Kevan\\portfolio-unykorn",
+      "deploy": "cd C:\\Users\\Kevan\\portfolio-unykorn && wrangler pages deploy . --project-name=portfolio-unykorn --branch=main"
+    },
+    {
+      "id": "x402-health",
+      "name": "x402 Facilitator",
+      "url": "https://x402.unykorn.org/health",
+      "http_status": 200,
+      "status": "live",
+      "source_path": "C:\\Users\\Kevan\\UnyKorn-X402-aws",
+      "deploy": "See x402-payment-network skill / UnyKorn-X402-aws workers"
+    },
+    {
+      "id": "apostle-health",
+      "name": "Apostle Chain API",
+      "url": "https://apostle.unykorn.org/health",
+      "http_status": 200,
+      "status": "live",
+      "source_path": "Apostle chain production (chain_id 7332)",
+      "deploy": "Origin health — local 7332 optional for dev"
+    }
+  ],
+  "dns_recommendations": [
+    {
+      "host": "troptions.unykorn.org",
+      "action": "Custom domain on Worker troptions — verify SSL Full (strict)",
+      "status": "ok"
+    },
+    {
+      "host": "troptionsexchange.unykorn.org",
+      "action": "Same Worker as troptions — alias for Exchange OS",
+      "status": "ok"
+    },
+    {
+      "host": "troptionsmint.com",
+      "action": "Zone active — routes in wrangler.jsonc; keep api/wc/donk subdomains proxied",
+      "status": "ok"
+    },
+    {
+      "host": "goat.unykorn.org",
+      "action": "Tunnel goat.yml → localhost:8850 (goat-site); keep node server.js running",
+      "status": "ok"
+    },
+    {
+      "host": "launch.unykorn.org",
+      "action": "Confirm CNAME targets troptions worker; redeploy after launch route changes",
+      "status": "ok"
+    },
+    {
+      "host": "fthedu.unykorn.org",
+      "action": "Point to fthedu Pages or troptions worker; rebuild fthedu.pages.dev (404)",
+      "status": "review"
+    },
+    {
+      "host": "troptions.io / troptionsxchange.io",
+      "action": "Deploy T-Lev-8 legacy redirect worker (405 on HEAD may be method-only)",
+      "status": "redirect-pending"
+    }
+  ]
+}

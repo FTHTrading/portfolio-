@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="UnyKorn operator command center — system portfolio, TROPTIONS vertical catalog, deploy paths, and URL health." />
+  <title>UnyKorn Command Center</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="orb orb-a"></div>
+  <div class="orb orb-b"></div>
+
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">Uny<span>Korn</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/services">Services</a></li>
+        <li><a href="/systems">Systems</a></li>
+        <li><a href="/systems/troptions">TROPTIONS</a></li>
+        <li><a href="/command-center">Command Center</a></li>
+        <li><a href="/rwa-readiness">RWA Readiness</a></li>
+        <li><a href="/build-request">Build Request</a></li>
+      </ul>
+      <a href="/systems/troptions" class="btn nav-cta">TROPTIONS Stack</a>
+      <button id="nav-menu-btn" class="nav-menu-btn" aria-label="Menu">☰</button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="section hero container">
+      <p class="kicker">Operator · Internal</p>
+      <h1>UnyKorn <em>Command Center</em></h1>
+      <p class="hero-sub">
+        Portfolio registry for deployable systems. TROPTIONS vertical catalog with live URL probes,
+        Cloudflare worker map, source paths, and DNS recommendations.
+      </p>
+      <div class="btn-row">
+        <a href="/systems/troptions" class="btn btn-primary">TROPTIONS Vertical</a>
+        <a href="/data/troptions-catalog.json" class="btn btn-outline">JSON Catalog</a>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0;">
+      <div class="container">
+        <div class="highlight-bar">
+          <p><strong class="text-gold">Cloudflare account</strong> <code>07bcc4a189ef176261b818409c95891f</code> · Probed 2026-05-27</p>
+        </div>
+
+        <div class="section-header" style="margin-bottom:1.5rem;">
+          <p class="kicker">System families</p>
+          <h2>Portfolio map</h2>
+        </div>
+        <div class="card-grid">
+          <div class="card" style="border-color:var(--gold);">
+            <div class="card-icon">⛓️</div>
+            <div class="card-tag">22-year network</div>
+            <h3>TROPTIONS</h3>
+            <p>Mint → Exchange OS → Live → Launch → University → Fan OS → T-VEX-8 gates.</p>
+            <div class="card-actions" style="margin-top:1rem;">
+              <a href="/systems/troptions">Vertical page</a>
+              <a href="https://troptions.unykorn.org/exchange-os" target="_blank" rel="noreferrer">Exchange OS</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-icon">📐</div>
+            <h3>RWA Readiness</h3>
+            <p>Evidence intake, witness log, TEV scoring — client-facing packet MVP.</p>
+            <div class="card-actions" style="margin-top:1rem;">
+              <a href="/rwa-readiness">Product page</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-icon">⚡</div>
+            <h3>x402 / Apostle</h3>
+            <p>ATP settlement, payment facilitator, multi-chain rails.</p>
+            <div class="card-actions" style="margin-top:1rem;">
+              <a href="https://x402.unykorn.org/health" target="_blank" rel="noreferrer">x402 health</a>
+              <a href="https://apostle.unykorn.org/health" target="_blank" rel="noreferrer">Apostle health</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-icon">🧬</div>
+            <h3>Genesis Protocol</h3>
+            <p>Deterministic simulation engine — super-s.pages.dev/genesis.</p>
+            <div class="card-actions" style="margin-top:1rem;">
+              <a href="https://super-s.pages.dev/genesis" target="_blank" rel="noreferrer">Genesis</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:var(--surface);">
+      <div class="container">
+        <div class="section-header">
+          <p class="kicker">TROPTIONS · All URLs</p>
+          <h2>Health matrix</h2>
+        </div>
+        <div style="overflow-x:auto;">
+          <table class="catalog-table" id="url-health-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>URL</th>
+                <th>HTTP</th>
+                <th>Status</th>
+                <th>Worker / Pages</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <p class="kicker">DNS</p>
+          <h2>Recommended fixes</h2>
+        </div>
+        <div id="dns-fixes"></div>
+      </div>
+    </section>
+
+    <section class="section" style="background:var(--gold-dim);">
+      <div class="container">
+        <div class="section-header">
+          <p class="kicker">Workers audit</p>
+          <h2>Cloudflare deploy targets</h2>
+        </div>
+        <table class="catalog-table">
+          <thead>
+            <tr><th>Worker</th><th>Repo</th><th>Deploy command</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>troptions</code></td>
+              <td><code>C:\Users\Kevan\troptions</code></td>
+              <td><code>npm run cf:deploy</code></td>
+            </tr>
+            <tr>
+              <td><code>troptionsmint</code></td>
+              <td><code>C:\Users\Kevan\troptionsmint</code></td>
+              <td><code>npm run cf:deploy</code></td>
+            </tr>
+            <tr>
+              <td><code>troptions-pdf-host</code></td>
+              <td><code>C:\Users\Kevan\troptions</code></td>
+              <td><code>wrangler deploy -c wrangler.pdfs.jsonc</code></td>
+            </tr>
+            <tr>
+              <td><code>fifa-unykorn-router</code></td>
+              <td><code>C:\Users\Kevan\Desktop\Projects\fifa-unykorn-router</code></td>
+              <td><code>wrangler deploy</code></td>
+            </tr>
+            <tr>
+              <td>Pages <code>portfolio-unykorn</code></td>
+              <td><code>C:\Users\Kevan\portfolio-unykorn</code></td>
+              <td><code>wrangler pages deploy . --project-name=portfolio-unykorn</code></td>
+            </tr>
+            <tr>
+              <td>Pages <code>troptions-fifa</code></td>
+              <td>Source TBD on disk</td>
+              <td><code>wrangler pages deploy —project-name=troptions-fifa</code></td>
+            </tr>
+            <tr>
+              <td>Pages <code>fthedu</code></td>
+              <td>See troptions /troptions/university</td>
+              <td>Rebuild <code>fthedu.pages.dev</code> (404 on default URL)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><strong>UnyKorn Command Center</strong> — portfolio.unykorn.org/command-center</p>
+      <p style="margin-top:0.5rem;"><a href="/">← Portfolio home</a></p>
+    </div>
+  </footer>
+
+  <script src="/nav.js"></script>
+  <script>
+    (async function () {
+      const res = await fetch("/data/troptions-catalog.json");
+      const data = await res.json();
+      const tbody = document.querySelector("#url-health-table tbody");
+      const dnsEl = document.getElementById("dns-fixes");
+
+      const statusClass = (s) => {
+        if (s === "live") return "status-live";
+        if (s === "broken") return "status-broken";
+        return "status-pending";
+      };
+
+      for (const site of data.sites) {
+        const tr = document.createElement("tr");
+        const http = site.http_status != null ? site.http_status : "—";
+        const infra = site.worker || site.pages_project || "—";
+        tr.innerHTML = `
+          <td>${site.name}</td>
+          <td><a href="${site.url}" target="_blank" rel="noreferrer">${site.url.replace("https://","")}</a></td>
+          <td>${http}</td>
+          <td><span class="status-pill ${statusClass(site.status)}">${site.status}</span></td>
+          <td><code>${infra}</code></td>
+        `;
+        tbody.appendChild(tr);
+      }
+
+      for (const fix of data.dns_recommendations) {
+        const div = document.createElement("div");
+        div.className = "highlight-bar";
+        div.style.marginBottom = "0.75rem";
+        const sc = fix.status === "ok" ? "status-live" : fix.status === "broken" ? "status-broken" : "status-pending";
+        div.innerHTML = `
+          <p><strong>${fix.host}</strong> <span class="status-pill ${sc}">${fix.status}</span></p>
+          <p style="margin-top:0.35rem;font-size:0.88rem;">${fix.action}</p>
+        `;
+        dnsEl.appendChild(div);
+      }
+    })();
+  </script>
+</body>
+</html>
