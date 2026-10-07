@@ -19,6 +19,7 @@ const REQUIRED_PAGES = [
   { file: "systems/troptions/index.html",  must: ["TROPTIONS", "Exchange OS", "troptions-catalog.json"] },
   { file: "command-center/index.html",     must: ["Command Center", "url-health-table", "troptions-catalog.json"] },
   { file: "developer/index.html",          must: ["Quant API", "Predictive Metrics", "12345"] },
+  { file: "blockchain-fraud/index.html",    must: ["Blockchain Fraud", "Check before you send", "$9.95", "$750", "$1,750", "NTI-2026-001", "0%", "Recovery Fees"] },
 ];
 
 const REQUIRED_DATA = [
